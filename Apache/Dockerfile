@@ -1,5 +1,6 @@
 FROM centos:latest
 MAINTAINER SundM
+RUN yum -y update
 RUN yum -y install httpd
 COPY index.html /var/www/html/
 CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
